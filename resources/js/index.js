@@ -18,4 +18,4 @@ const contrast = WCAG_ratio(BIT_R, BIT_G, BIT_B).toFixed(2);
 source[0].style.backgroundColor="rgb(" + BIT_R + "," + BIT_G + "," + BIT_B + ")";
 source[0].innerHTML=contrast + "</br>" + HSL[0]
 
-export {BIT_R, BIT_B, BIT_G, HSL} // potentially just export HCL to scales.js
+export {HSL} // potentially just export HCL to scales.js

@@ -9,7 +9,7 @@ var s = HSL[1];
 var l = HSL[2];
 
 //how many hues you want to generate?
-var hues = 20
+var hues = 12
 //how many degrees to increase
 var degrees = 360/hues
 
@@ -35,7 +35,8 @@ hue_array.forEach(function(value){
     const row = document.createElement("div");
     row.className = "row hues";
     row.style.backgroundColor = "#fffff0";
-    row.innerHTML="<span style= \"width:60px\">"+value+"</span>";
+    // var slider = "<input type=\"range\" min=\"1\" max=\"100\" value=\"50\">"
+    row.innerHTML="<span style= \"width:60px\">"+value+"</span>"
 
     //now add the cells created into the row
     const cells = scale(value,s,l)
@@ -43,7 +44,8 @@ hue_array.forEach(function(value){
         // console.log(value)
         row.appendChild(value)
     })
-
+    
+    // row.append(slider)
     //finally add it to the document    
     col[0].appendChild(row)
 
