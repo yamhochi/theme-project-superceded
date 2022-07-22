@@ -6,40 +6,23 @@ const { hsluvToRgb } = pkg;
 //using the master HSL, find the scale based on that colour's L value
 
 export function scale(h, s, l) {
-    //how many? var steps = 10
-    var above = Math.floor((100 - l) / 10) //eg 5
-    var below = 10 - 1 - above //eg 4
- 
 
-    //you want to create this - obj_hsl={100:[H,S,L], 200:[H,S,L]}
-    const array_Ln = [l]
+    const array_Ln = []
     let i = 0
-    var Ln
+    var Ln = l
 
-    // Start with below
-    while (i < below) {
-        console.log("below"+ i)
-        //start with 100
-        Ln = l - (below - i) * 10
-        // step = i
-        i = i + 1
+    while(Ln<100 & i<10){
         array_Ln.push(Ln)
-    }
-
-
-    // then deal with above
-    let j = 1
-    while (above < 10) {
-        console.log("above:"+ above)
-        //start with 
-        Ln = l + (j * 10) //j=1
-        above = above + 1
-        j = j + 1
-        array_Ln.push(Ln)
+        Ln = Ln + 10
+        if(Ln > 100){
+            Ln=Ln-100
+        }
+        i=i+1
     }
 
     array_Ln.sort((a, b) => a - b);
-    // console.log(array_Ln)
+    console.log(array_Ln)
+
 
     let item
     let scales = []
