@@ -4,7 +4,7 @@ const {rgbToHsluv} = pkg;
 
 // **** Step 1 **** //
 //this step converts the inputted rgb into the desired colour space, which we need it to generate the scales in step 2
-
+console.log("foo")
 //TODO convert this to function
 
 //for now we are using the HSLUV colour space

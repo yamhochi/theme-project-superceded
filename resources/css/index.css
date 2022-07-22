@@ -28,7 +28,7 @@
   
   .row {
     float: left;
-    height: 50px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     padding-bottom: 8px;
